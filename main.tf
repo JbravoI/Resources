@@ -72,7 +72,7 @@ resource "azurerm_virtual_machine" "main" {
   name                  = "${var.prefix}-vm"
   location              = azurerm_resource_group.resourcegrp.location
   resource_group_name   = azurerm_resource_group.resourcegrp.name
-  network_interface_ids = [azurerm_network_interface.main.id]
+  network_interface_ids = [azurerm_network_interface.main_ni.id]
   vm_size               = "Standard_B1s"
   # delete_os_disk_on_termination = true
   # delete_data_disks_on_termination = true
@@ -98,13 +98,13 @@ resource "azurerm_virtual_machine" "main" {
     disable_password_authentication = false
   }
 
-  user_data = <<EOF
-#! /bin/bash
-sudo  install -y nginx1
-sudo service nginx start
-sudo rm /usr/share/nginx/html/index.html
-echo '<html><head><title>Taco Team Server</title></head><body style=\"background-color:#1F778D\"><p style=\"text-align: center;\"><span style=\"color:#FFFFFF;\"><span style=\"font-size:28px;\">You did it! Have a &#127790;</span></span></p></body></html>' | sudo tee /usr/share/nginx/html/index.html
-EOF
+#   user_data = <<EOF
+# #! /bin/bash
+# sudo  install -y nginx1
+# sudo service nginx start
+# sudo rm /usr/share/nginx/html/index.html
+# echo '<html><head><title>Taco Team Server</title></head><body style=\"background-color:#1F778D\"><p style=\"text-align: center;\"><span style=\"color:#FFFFFF;\"><span style=\"font-size:28px;\">You did it! Have a &#127790;</span></span></p></body></html>' | sudo tee /usr/share/nginx/html/index.html
+# EOF
 
 
 }
