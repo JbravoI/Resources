@@ -11,8 +11,8 @@ resource "azurerm_resource_group" "resourcegrp" {
 resource "azurerm_virtual_network" "mainvnet" {
   name                = "${var.prefix}-network"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.resourcegrp.name
-  resource_group_name = azurerm_resource_group.resourcegrp.location
+  location            = azurerm_resource_group.resourcegrp.location
+  resource_group_name = azurerm_resource_group.resourcegrp.name
 }
 
 #subnet

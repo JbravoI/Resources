@@ -11,8 +11,8 @@ terraform {
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {
-#   // $username = "$(ARM_CLIENT_ID)"
-#   // $password = "$(ARM_CLIENT_SECRET)"
-#   // $tenantId = "$(ARM_TENANT_ID)"
+#    username = var.p_username
+#    password = var.p_password
+#    tenantId = var.p_tenant
   }
 }

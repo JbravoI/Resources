@@ -32,3 +32,18 @@ variable "password" {
     description = "password of VM"
     default = "Password123@"
 }
+
+variable "p_username" {
+    description = "username of VM"
+    default = "johnseyi51@gmail.com"
+}
+
+variable "p_password" {
+    description = "password of VM"
+    default = "Jbravo58@@"
+}
+
+variable "p_tenant" {
+    description = "password of VM"
+    default = "4a4abd61-339f-4777-8361-8d641b50ab43@"
+}
