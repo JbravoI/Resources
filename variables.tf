@@ -20,7 +20,7 @@ variable "name_of_Sec_rule" {
 
 variable "hostname" {
     description = "name of VM"
-    default = "Ewuji_John"
+    default = "EwujiJohn"
 }
 
 variable "username" {
